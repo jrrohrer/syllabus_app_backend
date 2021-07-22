@@ -28,18 +28,18 @@ The application we will create during the project build series is a "Syllabus Sh
 - [x] 5. Generate new [Rails API](https://edgeguides.rubyonrails.org/api_app.html) using `rails new <my_app_name> --database=postgresql --api`
     - (Replace `<my_app_name>` with the actual name of your project)
 - [x] 6. Create github repo
-- [ ] 7. Create a new branch for building out models. This way you can always go back to the fresh API.
+- [x] 7. Create a new branch for building out models. This way you can always go back to the fresh API.
     - **NOTE**: It is best practice to always create a new branch when working on a new feature/edit to your code. Your master branch should only have working code. Debug in a branch, not in master.
 
 **NOW WE'RE READY TO CODE (BUT JUST OUR MODELS — NO CONTROLLERS OR SERIALIZERS YET)**
 
 **NOTE**: Remember to _**VERTICALLY**_ build your MVP! This means building out one model/feature at a time. DO NOT build out _all_ the models and controllers at the same time. This is the easiest way to get lost in your project very early. Read more about this [here](https://github.com/learn-co-students/js-spa-project-instructions-online-web-sp-000/blob/master/project-planning-tips.md#build-vertically-not-horizontallys).
 
-- [ ] 8. Build your models
+- [x] 8. Build your models
     - Migrations
     - Model classes
     - Associations
-- [ ] 9. Test your models and associations in the console
+- [x] 9. Test your models and associations in the console
     - Create some seed data
     - Adjust migrations as needed
 
