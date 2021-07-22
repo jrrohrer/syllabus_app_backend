@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :syllabuses #(thanks, ActiveRecord for the weird pluralization rules)
+  has_many :syllabuses, dependent: :destroy
 end
