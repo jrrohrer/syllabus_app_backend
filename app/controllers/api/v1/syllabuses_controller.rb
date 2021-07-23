@@ -2,7 +2,12 @@ class Api::V1::SyllabusesController < ApplicationController
 
   def index
     syllabuses = Syllabus.all
-    render json: syllabuses
+    # render json: syllabuses # (returns an array of objects)
+    # options ={
+      # include associated category
+      # include: [:category] # has to match the associations in the model
+    #}
+    render json: SyllabusSerializer.new(syllabuses) # (returns a data object containing an array of objects. Objects have an attributes object with attributes nested inside. It gives us more specificity when working with our data on large scale.)
   end
 
   def create
@@ -12,7 +17,7 @@ class Api::V1::SyllabusesController < ApplicationController
       render json: syllabus, status: :accepted 
     else
       # if object doesn't save, render an error 
-      render json: {errors: syllabus.errors.full_messages}, status: :unprocessible_entity
+      render json: {errors: syllabus.errors.full_messages}, status: :unprocessible_entity # server understood the request, but there was a problem with information sent in the request
     end
   end
 
