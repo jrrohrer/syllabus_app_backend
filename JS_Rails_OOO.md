@@ -107,6 +107,23 @@ The application we will create during the project build series is a "Syllabus Sh
 
 ### PART 3: DOM Manipulation, Events, and Fetch using Rails API
 - **JS MANTRA:** When _some event_ happens, I want to make _what kind of_ fetch and then manipulate the DOM _in what way_?
+
+#### Initial Set Up
+- [x] 1. Create separate directory for frontend
+- [x] 2. Create `index.html` file with script tag connecting your `index.js`. Ex: `<script type="text/javascript" src="index.js"></script>
+- [x] 3. Create `index.js` and add `console.log("inside index.js")` to check the connection. (Open the html file in the browser and check the logged response in the console).
+- [ ] 4. Set up git repo and connect it to GitHub.
+
+#### Connect your API to your Frontend!
+- [ ] 5. Think about the JS Mantra and answer this question: When the DOM Content is Loaded, I want to make a GET fetch and then manipulate the DOM in what way?
+- [ ] 6. Create `DOMContentLoaded` event listener and `console.log("loaded")` as the event handler to make sure you correctly set up the listener
+- [ ] 7. We're eventually going to make a clal to the index route of our API (ex: localhost:3000/api/v1/syllabuses). Run your rails server and visit that end point in the browser to ensure the expected JSON data is present.
+- [ ] 8. We can see the JSON data in the browser but in order to acces it in our frontend, we'll need to setup cross-origin resource sharing (CORS). In order to do this, we'll need to do a couple of things. 
+      * Navigate to your Gemfile and uncomment `gem 'rack-cors'` then `bundle install`.
+      * Inside of `config/initializers/cors.rb` uncomment the CORS code and update `origins 'example.com` to `origins '*'`
+- [ ] 9. Commit and push this code!
+
+#### Receive GET data from the server
 - [ ] 1. `GET` request
 - [ ] 2. `POST` request
 
